@@ -1,1 +1,1 @@
-# homebrew-soracom-cli
+# homebrew-soracom-clihomebrew formula for [soracom-cli](https://github.com/soracom/soracom-cli)## usage```$ brew tap soracom/soracom-cli$ brew install soracom-cli```
