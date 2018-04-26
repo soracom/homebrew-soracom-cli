@@ -1,7 +1,7 @@
 class SoracomCli < Formula
-  VERSION = "0.3.0"
-  SHA256_64 = "a7508a79873faa0e4fc2488c09705b520f74ac9437c4c5c2114e49c24a37f2f5"
-  SHA256_32 = "8dd8b228a697a9c5116caa86465b86fdda170c225009313491c30b848fc81581"
+  VERSION = "0.3.1"
+  SHA256_64 = "5102a380f74cc01e658938254b0b1daa6e7d46798d77f472c165838816681bb1"
+  SHA256_32 = "aee637cb41f816ae76772c6a13b93c7184bb443c84e6a0787d2013a75494bcc6"
 
   desc "A command line tool to invoke SORACOM API"
   homepage "https://github.com/soracom/soracom-cli"
