@@ -6,13 +6,13 @@ class SoracomCli < Formula
   SHA256_LINUX_64 = "211ece68b6c4ef25707160cb94c5aa8c46eb107b208c28ca291323462898a223"
 
   SHA256 = {
-    :darwin => {
-      :amd64 => SHA256_MAC_64,
-      :386   => SHA256_MAC_32,
+    'darwin' => {
+      'amd64' => SHA256_MAC_64,
+      '386'   => SHA256_MAC_32,
     },
-    :linux => {
-      :amd64 => SHA256_LINUX_64,
-      :386   => SHA256_LINUX_32,
+    'linux' => {
+      'amd64' => SHA256_LINUX_64,
+      '386'   => SHA256_LINUX_32,
     },
   }
 
@@ -21,15 +21,15 @@ class SoracomCli < Formula
   version VERSION
 
   if OS.mac?
-    os = :darwin
+    os = 'darwin'
   else
-    os = :linux
+    os = 'linux'
   end
 
   if Hardware::CPU.is_64_bit?
-    arch = :amd64
+    arch = 'amd64'
   else
-    arch = :386
+    arch = '386'
   end
 
   @@binname = "soracom_#{VERSION}_#{os}_#{arch}"
