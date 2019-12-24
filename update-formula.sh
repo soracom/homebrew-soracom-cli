@@ -14,19 +14,9 @@ fi
     SHA256_LINUX_64=$(curl -s -L "https://github.com/soracom/soracom-cli/releases/download/v$VERSION/soracom_${VERSION}_linux_amd64" | shasum -a 256 | cut -f 1 -d ' ' )
 }
 
-os="$( uname -s )"
-[[ "$os" == "Darwin" ]] && {
-  sed -e "s/VERSION *=.*/VERSION = \"$VERSION\"/g"       -i '.bak' soracom-cli.rb
-  sed -e "s/SHA256_MAC_32 *=.*/SHA256_MAC_32 = \"$SHA256_MAC_32\"/g" -i '.bak' soracom-cli.rb
-  sed -e "s/SHA256_MAC_64 *=.*/SHA256_MAC_64 = \"$SHA256_MAC_64\"/g" -i '.bak' soracom-cli.rb
-  sed -e "s/SHA256_LINUX_32 *=.*/SHA256_LINUX_32 = \"$SHA256_LINUX_32\"/g" -i '.bak' soracom-cli.rb
-  sed -e "s/SHA256_LINUX_64 *=.*/SHA256_LINUX_64 = \"$SHA256_LINUX_64\"/g" -i '.bak' soracom-cli.rb
-}
-[[ "$os" == "Linux" ]] && {
-  sed -e "s/VERSION *=.*/VERSION = \"$VERSION\"/g"       -i'.bak' soracom-cli.rb
-  sed -e "s/SHA256_MAC_32 *=.*/SHA256_MAC_32 = \"$SHA256_MAC_32\"/g" -i'.bak' soracom-cli.rb
-  sed -e "s/SHA256_MAC_64 *=.*/SHA256_MAC_64 = \"$SHA256_MAC_64\"/g" -i'.bak' soracom-cli.rb
-  sed -e "s/SHA256_LINUX_32 *=.*/SHA256_LINUX_32 = \"$SHA256_LINUX_32\"/g" -i'.bak' soracom-cli.rb
-  sed -e "s/SHA256_LINUX_64 *=.*/SHA256_LINUX_64 = \"$SHA256_LINUX_64\"/g" -i'.bak' soracom-cli.rb
-}
+sed -e "s/VERSION *=.*/VERSION = \"$VERSION\"/g"       -i'.bak' soracom-cli.rb
+sed -e "s/SHA256_MAC_32 *=.*/SHA256_MAC_32 = \"$SHA256_MAC_32\"/g" -i'.bak' soracom-cli.rb
+sed -e "s/SHA256_MAC_64 *=.*/SHA256_MAC_64 = \"$SHA256_MAC_64\"/g" -i'.bak' soracom-cli.rb
+sed -e "s/SHA256_LINUX_32 *=.*/SHA256_LINUX_32 = \"$SHA256_LINUX_32\"/g" -i'.bak' soracom-cli.rb
+sed -e "s/SHA256_LINUX_64 *=.*/SHA256_LINUX_64 = \"$SHA256_LINUX_64\"/g" -i'.bak' soracom-cli.rb
 
