@@ -1,5 +1,4 @@
 #!/bin/bash
-d="$( cd "$(dirname "$0")"; pwd )"
 
 VERSION=$1
 if [ "$VERSION" == "" ]; then
