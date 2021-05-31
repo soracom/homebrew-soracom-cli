@@ -39,6 +39,8 @@ class SoracomCli < Formula
     arch = '386'
   when 'armv6l', 'armv7l'
     arch = 'arm'
+  else
+    puts "unknown arch: `uname -m`"
   end
 
   @@binname = "soracom_#{VERSION}_#{os}_#{arch}"
