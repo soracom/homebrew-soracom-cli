@@ -30,7 +30,7 @@ class SoracomCli < Formula
     os = 'linux'
   end
 
-  case `uname -m`
+  case `uname -m`.chomp!
   when 'x86_64'
     arch = 'amd64'
   when 'arm64', 'aarch64'
