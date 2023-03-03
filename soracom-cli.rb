@@ -46,6 +46,7 @@ class SoracomCli < Formula
   @@binname = "soracom_#{VERSION}_#{os}_#{arch}"
   url "https://github.com/soracom/soracom-cli/releases/download/v#{VERSION}/#{@@binname}"
   sha256 SHA256[os][arch]
+  license "MIT"
 
   def install
     mv @@binname, 'soracom'
